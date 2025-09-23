@@ -4,32 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
   <title>Portfolio</title>
   <style>
     /* ===== Base Styling ===== */
     html {
-      scroll-behavior: smooth; /* smooth scroll */
+      scroll-behavior: smooth;
     }
     body {
       font-family: 'Share Tech Mono', monospace;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
-      color: white;   
+      background: linear-gradient(-45deg, #1a1a1a, #2b2b2b, #1a1a1a, #2b2b2b);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      color: white;
       line-height: 1.6;
     }
 
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-   /* ===== Header ===== */
+    /* ===== Header ===== */
     header {
-      background: linear-gradient(135deg, #ffffff, #453d3d); /* white → light gray */
+      background: linear-gradient(135deg, #ffffff, #453d3d);
       color: black;
       padding: 40px 20px;
       text-align: center;
       border-bottom: 5px solid #e60000;
     }
-
     header h1 {
       margin: 0;
       font-size: 2.5em;
@@ -37,8 +42,9 @@
     header p {
       margin: 10px 0 0;
       font-size: 1.2em;
-      color: #333; /* darker gray for contrast */
+      color: #333;
     }
+
     /* ===== Navigation ===== */
     nav {
       background: #e60000;
@@ -65,13 +71,37 @@
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
-      animation: fadeIn 1s ease-in;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     h2 {
       color: #e60000;
       border-bottom: 2px solid #444;
       padding-bottom: 5px;
       margin-bottom: 20px;
+    }
+
+    /* ===== Download Buttons ===== */
+    .download-btn {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 12px 18px;
+      background: #e60000;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.3s, color 0.3s;
+      font-weight: bold;
+    }
+    .download-btn:hover {
+      background: white;
+      color: #e60000;
+      transform: scale(1.05);
     }
 
     /* ===== Project Cards ===== */
@@ -85,53 +115,39 @@
       border: 2px solid #e60000;
       border-radius: 10px;
       padding: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 8px 15px rgba(230, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
     }
     .card h3 {
       margin-top: 0;
       color: white;
+      transition: color 0.3s, transform 0.3s;
     }
     .card a {
-      color: #e60000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .card a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== Downloads ===== */
-    .downloads a {
       display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 12px 18px;
+      margin-top: 10px;
+      padding: 10px 16px;
       background: #e60000;
       color: white;
       text-decoration: none;
       border-radius: 6px;
-      transition: background 0.3s, transform 0.3s;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s, color 0.3s;
     }
-    .downloads a:hover {
+
+    .card:hover {
+      transform: translateY(-5px);
+      border: 3px solid #ff0000;
+      box-shadow: 0px 12px 25px rgba(230,0,0,0.5);
+    }
+    .card:hover h3 {
+      color: #ff0000;
+      transform: scale(1.05);
+    }
+    .card a:hover {
       background: white;
       color: #e60000;
       transform: scale(1.05);
     }
-
-    /* ===== Email ====== */
-    #contact a {
-    color: #e60000;   /* red */
-    text-decoration: none; /* remove underline */
-    font-weight: bold;
-    }
-
-#contact a:hover {
-  color: white;      /* turns white on hover */
-  text-decoration: underline;
-}
 
     /* ===== Footer ===== */
     footer {
@@ -143,10 +159,17 @@
       border-top: 5px solid #e60000;
     }
 
-    /* ===== Animations ===== */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* ===== Contact ===== */
+    #contact a {
+      color: #e60000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    #contact a:hover {
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -160,7 +183,6 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="#downloads">Downloads</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -172,43 +194,32 @@
       scripts in Python. I’m ready to take on new challenges, grow fast, and build 
       software that works the way it should.
     </p>
+    <a href="files/Resume.pdf" target="_blank" class="download-btn">Download Resume</a>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
-      
       <div class="card">
         <h3>Movie Review Website</h3>
         <p>Created with HTML, CSS, and Java</p>
-        <a href="https://github.com/your-username/python-data">View on GitHub</a>
+        <a href="files/FeelReel-Movie Review Website.zip" download>Download Project</a>
       </div>
       <div class="card">
         <h3>Rat Smash Game</h3>
         <p>Created with MIT App Inventor</p>
-        <a href="https://github.com/your-username/selenium-project">View on GitHub</a>
+        <a href="files/RAT_SMASH.zip" download>Download Project</a>
       </div>
       <div class="card">
         <h3>Sport Equipment Rental System</h3>
         <p>Built in C++</p>
-        <a href="https://github.com/your-username/java-banking">View on GitHub</a>
+        <a href="files/Rental System.zip" download>Download Project</a>
       </div>
       <div class="card">
         <h3>Retail Outlet Shopping System</h3>
         <p>Built in C++</p>
-        <a href="https://github.com/your-username/java-banking">View on GitHub</a>
+        <a href="files/RetailOutlet.zip" download>Download Project</a>
       </div>
-    </div>
-  </section>
-
-  <section id="downloads">
-    <h2>Downloads</h2>
-    <div class="downloads">
-      <a href="files/Resume.pdf" download>Download Resume</a>
-      <a href="files/FeelReel-Movie Review Website/" download>Download >Movie Review Website Files</a>
-      <a href="files/RAT_SMASH.aia" download>Download Rat Smash Game Files</a>
-      <a href="files/Rental System.cpp" download>Download Sport Equipment Rental System Files</a>
-      <a href="files/RetailOutlet.cpp" download>Download Retail Outlet Shopping System Files</a>
     </div>
   </section>
 
@@ -221,6 +232,20 @@
   <footer>
     <p>&copy; 2025 Ikmalia Shazlin</p>
   </footer>
+
+  <!-- ===== Scroll Reveal Script ===== -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const revealSection = () => {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) section.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+  </script>
 
 </body>
 </html>
