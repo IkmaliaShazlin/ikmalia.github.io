@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Feel Reel</title>
+    <link rel="stylesheet" href="Contact.css">
+<body>
+    <!-- Sidebar toggle button-->
+    <div id="main"> 
+        <button class="openbtn" onclick="toggleNav()" style="background: none;"> 
+            <img src="image/Logo.png" alt="logo" style="height: 70px; width: 70px; position: fixed; top: 10px; left: 10px;"> 
+        </button>
+    </div>
+
+    <!-- Sidebar navigation menu -->
+    <div id="mySidebar" class="sidebar"> 
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">
+            <img src="image/Logo.png" alt="logo" style="height: 70px; width: 70px; position: absolute; top: 10px; left: 10px;">
+        </a> 
+        <a href="Home.php">Home</a> 
+            <a href="Profile.php">Profile</a> 
+            <a href="Contact.html">Contact Us</a>
+            <a href="ManageUserProfile.php">Settings</a>
+            <a href="Login.php">Log Out</a>
+    </div>
+    <header>
+        <h1>FeelReel</h1>
+    </header>
+    
+     <!-- Contact form container -->
+    <div class="contact-container">
+        <h2>Contact Us</h2> 
+        <p>Have questions or movie recommendations? Let us know!</p>
+        
+        <!-- Form to send enquiries, posts data to Enquiry.php -->
+        <form action="Enquiry.php" method="POST">
+            <input type="hidden" name="origin" value="Contact.html">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+     <!-- Script for opening and closing sidebar -->
+    <script>
+        function toggleNav() {
+            let sidebar = document.getElementById("mySidebar");
+            let main = document.getElementById("main");
+            if (sidebar.style.width === "250px") {
+                sidebar.style.width = "0";
+                main.style.marginLeft = "0";
+            } else {
+                sidebar.style.width = "250px";
+                main.style.marginLeft = "250px";
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 FeelReel. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

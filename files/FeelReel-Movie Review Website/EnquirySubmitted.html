@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Enquiry Submitted</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enquiry Submitted Successfully!</h1>
+    <p>Thank you for contacting us. We’ll get back to you soon.</p>
+    <a id="goBackLink" href="#">Go Back</a>
+
+    <script>
+        // Get ?origin=Contact.html or ?origin=FrontPageContactUs.html
+        const urlParams = new URLSearchParams(window.location.search);
+        const origin = urlParams.get('origin') || 'FrontPageContactUs.html';
+        document.getElementById('goBackLink').href = origin;
+    </script>
+</body>
+</html>

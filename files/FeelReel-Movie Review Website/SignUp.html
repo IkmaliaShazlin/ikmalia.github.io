@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Character encoding -->
+        <meta charset="UTF-8">
+        <!-- Responsive layout -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <!-- External CSS for styling -->
+        <link rel="stylesheet" href="SignUp.css">
+        <!-- JustValidate library for client-side form validation -->
+        <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+        <!-- Custom validation rules -->
+        <script src="/FYP/Project/js/validation.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Signup form (POSTs to UserSignUp.php) -->
+            <form action="UserSignUp.php" method="post" novalidate>
+                <img src="image/Logo.png">
+                <h1>Sign Up</h1>
+                <!-- Username input -->
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="username" name="username">
+                </div>
+                <!-- Email input -->
+                <div class="input-box">
+                    <input type="email" placeholder="Email" id="email" name="email" >
+                </div>
+                <!-- Password input -->
+                <div class="input-box">
+                    <input type="password" placeholder="Create Password" id="password" name="password" >
+                </div>
+                <!-- Password confirmation input -->
+                <div class="input-box">
+                    <input type="password" placeholder="Repeat Password" id="password_confirmation" name="password_confirmation" >
+                </div>
+                <!-- Submit button -->
+                    <button type="submit" class="btn">Sign Up</button>
+                <!-- Link to login page -->
+                    <div class="login-link">
+                    <p>Have an account? <a href="Login.php" target="_blank">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/043/555/225/non_2x/illustration-of-film-reel-stripe-on-abstract-background-vector.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.background {
+    opacity: 0.2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+ 
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.poster img {
+    padding-top: 60px;
+    padding-bottom: 150px;
+    float: left;
+    position: relative;
+}
+
+.text {
+    padding-bottom: 70px;
+    padding-left: 40px;
+    float: right;
+    position: relative;
+    font-size: 17px;
+    color: rgb(235, 204, 148);
+}
+
+.text h1 {
+    text-decoration: underline;
+    font-size: 35px;
+    font-style: italic;
+}
+
+.text p {
+    font-family: Times New Roman;
+}
+
+.text button {
+    font-size: 18px;
+    border-radius: 6px;
+    background-color: white; 
+    border: 2px solid #555555;
+    cursor: pointer;
+}
+
+.text button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    background-color: #6E7881;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+.icon {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon::before {
+    content: "≡";
+    font-size: 18px;
+    color: #6E7881;
+}
+
+.texts {
+    text-align: center;
+}
+.texts h2 {
+    margin: 0;
+    font-size: 18px;
+}
+.texts p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
