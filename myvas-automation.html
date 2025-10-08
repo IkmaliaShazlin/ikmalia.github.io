@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <title>MyVAS Automation Project | Ikmalia Portfolio</title>
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background: #f6c1c1;
+      color: #602b2b;
+      line-height: 1.6;
+    }
+
+    header {
+      color: rgb(192, 66, 66);
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.1em;
+      color: white;
+      margin-top: 10px;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1em;
+    }
+
+    .project-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 1000px;
+      margin: 80px auto;
+      padding: 40px 20px;
+      background: rgb(192, 66, 66);
+      color: #f6dbdb;
+      border-radius: 8px;
+      box-shadow: 0px 8px 25px rgba(230, 0, 0, 0.3);
+    }
+
+    .project-section h2 {
+      color: #602b2b;
+      margin-top: 25px;
+    }
+
+    .project-section p.description {
+      margin-bottom: 25px;
+      font-size: 1.05em;
+    }
+
+    video {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 10px 25px rgba(230, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    video:hover {
+      transform: scale(1.03);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin: 40px auto;
+      text-align: center;
+      padding: 12px 20px;
+      background: #e84d4d;
+      color: #f6dbdb;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #602b2b;
+      color: #e84d4d;
+      transform: scale(1.05);
+    }
+
+     /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      background: rgb(192, 66, 66);
+      color: #f6dbdb;
+      padding: 20px;
+      margin-top: 50px;
+      border-top: 5px solid #e84d4d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MyVAS Automation Project</h1>
+    <p>Python Selenium & Webdriver Automation</p>
+  </header>
+
+  <div class="intro">
+    <p>
+      During my internship at <strong>Entomo Digital Sdn. Bhd.</strong>, I worked on an automation project for the <strong>MyVAS system</strong>,
+      focusing on testing under the <strong>NIP module</strong>. The goal was to create automation scripts that would help test
+      different functions and ensure smooth system performance.
+    </p>
+  </div>
+
+  <div class="project-section">
+  <h2>Automation & Testing Overview</h2>
+  <p class="description">
+    This automation project focused on the <strong>NIP module</strong> of the MyVAS system. I implemented automation scripts using <strong>Selenium</strong> to simulate user interactions, detect functional issues, and improve testing efficiency, ensuring consistent quality and performance.
+  </p>
+
+  <p class="description">
+    The <strong>four scenarios</strong> I implemented for testing the NIP module are:
+    <ol style="text-align: left; margin: 10px 0 20px 30px; color: #583030">
+      <li><strong>NIP Page UI:</strong> Verifying that all interface elements are displayed correctly and detecting any unintended changes.</li>
+      <li><strong>NIP Search Bar:</strong> Ensuring it functions properly and displays accurate user information.</li>
+      <li><strong>NIP Vaccination:</strong> Automating vaccine report generation for patients and validating the report summaries.</li>
+      <li><strong>NIP Records:</strong> Confirming that patient records are present, accurate, and up-to-date.</li>
+    </ol>
+</p>
+
+  <p class="description">
+    The video below showcases my <strong>Mini Project</strong>, which includes demos for all four testing scenarios. Before diving into the mini project, I want to sneak in my experience during the internship at <strong>Entomo Digital Sdn. Bhd.</strong>:
+  </p>
+
+
+    <video controls>
+      <source src="files/MyVAS.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ikmalia Shazlin</p>
+  </footer>
+
+</body>
+</html>
