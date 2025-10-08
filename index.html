@@ -14,10 +14,10 @@
       font-family: 'Share Tech Mono', monospace;
       margin: 0;
       padding: 0;
-      background: linear-gradient(-45deg, #1a1a1a, #2b2b2b, #1a1a1a, #2b2b2b);
+      background: #f6dbdb;
       background-size: 400% 400%;
       animation: gradientBG 20s ease infinite;
-      color: white;
+      color: #602b2b;
       line-height: 1.6;
     }
 
@@ -29,11 +29,11 @@
 
     /* ===== Header ===== */
     header {
-      background: linear-gradient(135deg, #ffffff, #453d3d);
-      color: black;
+      background:rgb(192, 66, 66);
+      color: #f6dbdb;
       padding: 40px 20px;
       text-align: center;
-      border-bottom: 5px solid #e60000;
+      border-bottom: 5px solid #f6c3c3;
     }
     header h1 {
       margin: 0;
@@ -42,12 +42,12 @@
     header p {
       margin: 10px 0 0;
       font-size: 1.2em;
-      color: #333;
+      color: #f6c1c1;
     }
 
     /* ===== Navigation ===== */
     nav {
-      background: #e60000;
+      background: #f15353;
       padding: 12px;
       text-align: center;
       position: sticky;
@@ -55,14 +55,14 @@
       z-index: 1000;
     }
     nav a {
-      color: white;
+      color: #f6dbdb;
       margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s, transform 0.3s;
     }
     nav a:hover {
-      color: black;
+      color: #602b2b;
       transform: scale(1.1);
     }
 
@@ -80,8 +80,8 @@
       transform: translateY(0);
     }
     h2 {
-      color: #e60000;
-      border-bottom: 2px solid #444;
+      color: #e84d4d;
+      border-bottom: 2px solid #e84d4d;
       padding-bottom: 5px;
       margin-bottom: 20px;
     }
@@ -91,83 +91,105 @@
       display: inline-block;
       margin: 10px 0;
       padding: 12px 18px;
-      background: #e60000;
-      color: white;
+      background: #e84d4d;
+      color: #f6dbdb;
       text-decoration: none;
       border-radius: 6px;
       transition: background 0.3s, transform 0.3s, color 0.3s;
       font-weight: bold;
     }
     .download-btn:hover {
-      background: white;
-      color: #e60000;
+      background: #602b2b;
+      color: #e84d4d;
       transform: scale(1.05);
     }
 
     /* ===== Project Cards ===== */
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* 2 per row */
+      gap: 30px;
+      justify-content: center;
     }
+
     .card {
-      background: #111;
-      border: 2px solid #e60000;
+      background: #f6c1c1;
+      border: 2px solid #e84d4d;
+      color: white;
       border-radius: 10px;
       padding: 20px;
       transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
     }
     .card h3 {
       margin-top: 0;
-      color: white;
+      color: #602b2b;
       transition: color 0.3s, transform 0.3s;
     }
     .card a {
       display: inline-block;
       margin-top: 10px;
       padding: 10px 16px;
-      background: #e60000;
-      color: white;
+      background: #e84d4d;
+      color: #f6dbdb;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
       transition: background 0.3s, transform 0.3s, color 0.3s;
     }
 
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 12px 0;
+      display: block;
+      transition: all 0.5s ease;
+    }
+
+    /* On hover, show full image cleanly */
+    .card img:hover {
+      object-fit: contain;
+      background: #f6c1c1; /* adds contrast behind the image */
+      height: 300px; /* expands slightly for visual effect */
+      transform: scale(1.02);
+    }
+
+
     .card:hover {
       transform: translateY(-5px);
-      border: 3px solid #ff0000;
+      border: 3px solid #e84d4d;
       box-shadow: 0px 12px 25px rgba(230,0,0,0.5);
     }
     .card:hover h3 {
-      color: #ff0000;
+      color: #e84d4d;
       transform: scale(1.05);
     }
     .card a:hover {
-      background: white;
-      color: #e60000;
+      background: #602b2b;
+      color: #e84d4d;
       transform: scale(1.05);
     }
 
     /* ===== Footer ===== */
     footer {
       text-align: center;
-      background: #111;
-      color: #fff;
+      background: rgb(192, 66, 66);
+      color: #f6dbdb;
       padding: 20px;
       margin-top: 20px;
-      border-top: 5px solid #e60000;
+      border-top: 5px solid #e84d4d;
     }
 
     /* ===== Contact ===== */
     #contact a {
-      color: #e60000;
+      color: #e84d4d;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
     #contact a:hover {
-      color: white;
+      color: #602b2b;
       text-decoration: underline;
       cursor: pointer;
     }
@@ -188,46 +210,80 @@
 
   <section id="about">
     <h2>About Me</h2>
+    <p>Hi, I'm Ikmalia!</p>
     <p>
-      Hi, I'm Ikmalia! Fresh out of IT with real-world experience in QA and automation. 
-      I thrive on making software stronger; from regression testing to writing Selenium 
-      scripts in Python. I’m ready to take on new challenges, grow fast, and build 
-      software that works the way it should.
+      A fresh IT grad with hands-on experience in software development, testing, automation, and programming. 
+      I love solving problems and making tech work smarter.. from debugging tricky issues to writing 
+      Selenium scripts that make testing effortless. I’m always curious, adaptable, and ready to take 
+      on challenges that help me grow.
     </p>
-    <a href="files/Resume.pdf" target="_blank" class="download-btn">Download Resume</a>
+
+    <p>
+      This portfolio is a glimpse into what I’ve built and learned along the way.. a mix of my projects, 
+      skills, and the things I’m passionate about in tech.
+    </p>
+
+    <p>
+      If you’d like to know more about my background and experience, feel free to check out my resume below!
+    </p>
+
+    <a href="files/Resume_new.pdf" target="_blank" class="download-btn">Download Resume</a>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
+
+      <!-- Movie Review Website -->
       <div class="card">
         <h3>Movie Review Website</h3>
         <p>Created with HTML, CSS, and Java</p>
-        <a href="files/FeelReel-Movie Review Website.zip" download>Download Project Files</a>
+        <img src="files/FR_fp.png" alt="Movie Review Website Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
+        <p>A dynamic movie review site where users can add reviews, create wishlists, and watch trailers.A dynamic movie review site where users can add reviews, create wishlists, and watch trailers.</p>
+        <a href="movie-review.html">View More</a>
       </div>
+
+      <!-- Rat Smash Game -->
       <div class="card">
         <h3>Rat Smash Game</h3>
         <p>Created with MIT App Inventor</p>
-        <a href="files/RAT_SMASH.zip" download>Download Project Files</a>
+        <img src="files/Rat1.png" alt="Rat Smash Game Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
+        <p>A two-player mobile game where players have to smash as many rats as they can within a minute and the player with the highest score will be counted as the  winner</p>
+        <a href="rat-smash.html">View More</a>
       </div>
+
+      <!-- Sport Equipment Rental System -->
       <div class="card">
         <h3>Sport Equipment Rental System</h3>
         <p>Built in C++</p>
-        <a href="files/Rental System.zip" download>Download Project Files</a>
+        <img src="files/RS1.png" alt="Sports Rental System Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
+        <p>A system to let customers rent sport equipment according to their neededsport categories. Built features to calculate rental prices dynamically according to duration and equipment type.</p>
+        <a href="rental-system.html">View More</a>
       </div>
+
+      <!-- Retail Outlet Shopping System -->
       <div class="card">
         <h3>Retail Outlet Shopping System</h3>
         <p>Built in C++</p>
-        <a href="files/RetailOutlet.zip" download>Download Project Files</a>
+        <img src="files/RO1.png" alt="Retail Outlet System Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
+        <p>A shopping management system in that handles transactions, products, and customer purchases.</p>
+        <a href="retail-outlet.html">View More</a>
       </div>
+
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:ikmaliashazlin123@gmail.com">ikmaliashazlin123@gmail.com</a></p>
-    <p>Contact Number: 019-7071267</p>
+    <p>If you'd like to reach out for collaborations, opportunities, or just to connect, feel free to contact me:</p>
+
+    <p>
+      Email: <a href="mailto:ikmaliashazlin123@gmail.com">ikmaliashazlin123@gmail.com</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/ikmalia-suhailan-ba6493369/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank">linkedin.com/in/ikmalia-suhailan</a>
+    </p>
   </section>
+
+
 
   <footer>
     <p>&copy; 2025 Ikmalia Shazlin</p>
