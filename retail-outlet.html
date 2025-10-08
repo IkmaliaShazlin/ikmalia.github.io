@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <title>Rat Smash Game | Ikmalia Portfolio</title>
+  <title>Retail Outlet Shopping System | Ikmalia Portfolio</title>
   <style>
     body {
       font-family: 'Share Tech Mono', monospace;
@@ -55,14 +55,12 @@
     }
 
     .project-section img {
-    flex: 1.2;
+    flex: 1.5; /* give image more space */
     width: 100%;
-    max-width: 280px; /* smaller width for mobile screenshots */
-    height: auto;
+    max-width: 550px;
     box-shadow: 0px 8px 20px rgba(230, 0, 0, 0.3);
     transition: transform 0.4s ease;
     }
-
 
     .project-section img:hover {
     transform: scale(1.03);
@@ -126,66 +124,70 @@
 </head>
 <body>
 
-  <header>
-    <h1>Rat Smash Game</h1>
-    <p>MIT App Inventor</p>
+ <header>
+    <h1>Retail Outlet Shopping System</h1>
+    <p>C++ Interactive Shopping Experience</p>
   </header>
 
   <div class="intro">
     <p>
-      This project is a two-player mobile game where players compete to smash as many rats as possible within one minute. The player with the highest score at the end of the timer wins the match. Built using MIT App Inventor, this game combines fun, speed, and competition in a simple yet exciting interactive experience.
+      This project simulates a retail outlet shopping experience. Customers can input their gender, 
+      browse items by category, choose colors and sizes, add multiple items to their cart, and generate a receipt with the total payment. 
+      Designed to make shopping seamless and organized!
     </p>
   </div>
 
   <!-- ===== Section 1 ===== -->
   <div class="project-section">
-    <img src="files/Rat1.1.png">
+    <img src="files/RO1.1.png">
     <div class="project-text">
-      <h2>Home Screen</h2>
+      <h2>Gender Input</h2>
       <p>
-        This is the first screen players will see before starting the game. Both players must enter their names in the provided fields and press the “Submit” button to continue. Once submitted, their names will be displayed throughout the game, creating a more personalized and competitive experience.
+        The system first asks the customer to input their correct gender code, ensuring personalized shopping options.
+      </p>
     </div>
   </div>
 
-   <!-- ===== Section 2 ===== -->
+  <!-- ===== Section 2 ===== -->
   <div class="project-section">
-    <img src="files/Rat2.png">
+    <img src="files/RO2.png">
     <div class="project-text">
-      <h2>Main Menu</h2>
+      <h2>Category Selection</h2>
       <p>
-        After submitting their names, players are directed to the Main Menu. Here, they can select the difficulty level of the game — Easy, Medium, or Hard. The harder the level, the faster the rat moves, making it more challenging to tap. The Main Menu also includes a “Leaderboard” button where players can view the highest scores achieved in previous rounds.
+        Customers can choose between "Clothings" or "Accessories". The system then displays all available items in the selected category. Users pick their desired item code to proceed.
       </p>
     </div>
   </div>
 
   <!-- ===== Section 3 ===== -->
   <div class="project-section">
-    <img src="files/Rat3.png">
+    <img src="files/RO3.png">
     <div class="project-text">
-      <h2>Instructions</h2>
+      <h2>Item Colour & Size</h2>
       <p>
-        Once a difficulty level is chosen, Instructions will pop-up. It briefly explains how the game works and outlines the main rules. It ensures both players understand the gameplay mechanics, such as how to earn points and what happens when the timer runs out, before they begin.
-    </div>
-  </div>
-
- <!-- ===== Section 4 ===== -->
-  <div class="project-section">
-    <img src="files/Rat4.png">
-    <div class="project-text">
-      <h2>Gameplay Page</h2>
-      <p>
-       This is the main gameplay screen where the real competition begins. The screen is split into two areas, one for Player One and one for Player Two. Each player must tap the rat as quickly as possible within their side of the screen to score points. A countdown timer is displayed at the top, gradually ticking down until it reaches zero, signaling the end of the match.
+        Customers can select their preferred item color and size before adding the product to the shopping cart.
       </p>
     </div>
   </div>
 
- <!-- ===== Section 5 ===== -->
+  <!-- ===== Section 4 ===== -->
   <div class="project-section">
-    <img src="files/Rat5.png">
+    <img src="files/RO4.png">
     <div class="project-text">
-      <h2>LeaderBoard Page</h2>
+      <h2>Add More to Cart</h2>
       <p>
-        Once the timer reaches zero, players are automatically redirected to the Leaderboard page. This screen displays the final scores of both players and determines the winner of the round. The leaderboard also keeps track of previous game results, allowing players to compare scores and aim for new high records in future matches.
+        Users can continue shopping and add more items to their cart, repeating the same process for multiple products.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 5 ===== -->
+  <div class="project-section">
+    <img src="files/RO5.png">
+    <div class="project-text">
+      <h2>Receipt Generation</h2>
+      <p>
+        Finally, the system asks for the customer's name and address and generates a receipt with the total payment, summarizing all purchased items.
       </p>
     </div>
   </div>

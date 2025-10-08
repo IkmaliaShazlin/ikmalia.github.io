@@ -86,6 +86,12 @@
       margin-bottom: 20px;
     }
 
+    #about p {
+      margin-bottom: 40px; /* space between paragraphs */
+      line-height: 1.8;    /* space between lines inside each paragraph */
+    }
+
+
     /* ===== Download Buttons ===== */
     .download-btn {
       display: inline-block;
@@ -139,21 +145,16 @@
 
     .card img {
       width: 100%;
-      height: 250px;
-      object-fit: cover;
+      height: 300px;          /* like hover */
+      object-fit: contain;     /* like hover */
       border-radius: 10px;
       margin: 12px 0;
       display: block;
+      transform: scale(1.02); /* like hover */
+      background: #f6c1c1;    /* like hover */
       transition: all 0.5s ease;
     }
 
-    /* On hover, show full image cleanly */
-    .card img:hover {
-      object-fit: contain;
-      background: #f6c1c1; /* adds contrast behind the image */
-      height: 300px; /* expands slightly for visual effect */
-      transform: scale(1.02);
-    }
 
 
     .card:hover {
@@ -203,24 +204,24 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
+    <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I'm Ikmalia!</p>
+    <p>Hi, I'm Ikmalia!<br></p>
     <p>
       A fresh IT grad with hands-on experience in software development, testing, automation, and programming. 
       I love solving problems and making tech work smarter.. from debugging tricky issues to writing 
       Selenium scripts that make testing effortless. I’m always curious, adaptable, and ready to take 
-      on challenges that help me grow.
+      on challenges that help me grow.<br>
     </p>
 
     <p>
       This portfolio is a glimpse into what I’ve built and learned along the way.. a mix of my projects, 
-      skills, and the things I’m passionate about in tech.
+      skills, and the things I’m passionate about in tech.<br>
     </p>
 
     <p>
@@ -237,7 +238,7 @@
      <!-- Movie Review Website -->
     <div class="card">
       <h3>Movie Review Website</h3>
-      <p>Created using HTML, CSS, JavaScript, MySQL</p>
+      <p style="color: white;">Created using HTML, CSS, JavaScript, MySQL</p>
       <img src="files/FR_fp.png" alt="Movie Review Website Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
       <p>Dive into an interactive movie hub where fans can browse, review, and rate films, watch trailers, explore detailed descriptions, and manage personalized favourites and watchlists. Perfect for any cinephile looking for a seamless movie experience!</p>
       <a href="movie-review.html">View More</a>
@@ -246,7 +247,7 @@
     <!-- Rat Smash Game -->
     <div class="card">
       <h3>Rat Smash Game</h3>
-      <p>Created using MIT App Inventor</p>
+      <p style="color: white;">Created using MIT App Inventor</p>
       <img src="files/Rat1.png" alt="Rat Smash Game Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
       <p>Smash, tap, and compete! A fast-paced two-player mobile game where speed and reflexes decide the winner. Hit as many rats as you can in 60 seconds and see who reigns supreme!</p>
       <a href="rat-smash.html">View More</a>
@@ -254,9 +255,9 @@
 
     <!-- Sport Equipment Rental System -->
     <div class="card">
-      <h3>Sport Equipment Rental System</h3>
-      <p>Created using C++</p>
-      <img src="files/RS1.png" alt="Sports Rental System Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
+      <h3>Sports Equipment Rental System</h3>
+      <p style="color: white;">Created using C++</p>
+      <img src="files/R1.png" alt="Sports Rental System Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
       <p>Rent sports equipment effortlessly! Select your gear, pick your duration, and watch the system calculate your rental costs dynamically. Perfect for athletes and enthusiasts looking for a hassle-free experience.</p>
       <a href="rental-system.html">View More</a>
     </div>
@@ -264,7 +265,7 @@
     <!-- Retail Outlet Shopping System -->
     <div class="card">
       <h3>Retail Outlet Shopping System</h3>
-      <p>Created using C++</p>
+      <p style="color: white;">Created using C++</p>
       <img src="files/RO1.png" alt="Retail Outlet System Screenshot" style="width:100%; border-radius:8px; margin:12px 0;">
       <p>Shop smart and fast! Choose your favourite clothes and accessories, pick sizes and colors, and get the total price instantly. A smooth, interactive system that brings the shopping experience to life.</p>
       <a href="retail-outlet.html">View More</a>

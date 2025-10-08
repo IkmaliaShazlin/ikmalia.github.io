@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <title>Sports Equipment Rental System | Ikmalia Portfolio</title>
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background: #f6c1c1;
+      color: #602b2b;
+      line-height: 1.6;
+    }
+
+    /* ===== Header ===== */
+    header {
+      color: rgb(192, 66, 66);
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.1em;
+      color: white;
+      margin-top: 10px;
+    }
+
+    /* ===== Intro ===== */
+    .intro {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1em;
+    }
+
+    /* ===== Project Sections ===== */
+    .project-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-section img {
+      flex: 1.5;
+      width: 100%;
+      max-width: 550px;
+      box-shadow: 0px 15px 30px rgba(230, 0, 0, 0.55);
+      transition: transform 0.4s ease;
+    }
+
+    .project-section img:hover {
+      transform: scale(1.03);
+    }
+
+    .project-text {
+      flex: 1;
+      color: #f6dbdb;
+      min-width: 260px;
+      background: rgb(192, 66, 66);
+      padding: 25px;
+      box-shadow: 0px 8px 20px rgba(230, 0, 0, 0.35);
+      border-radius: 6px;
+    }
+
+    .project-text h2 {
+      margin-top: 0;
+      color: #602b2b;
+    }
+
+    /* ===== Back Button ===== */
+    .back-btn {
+      display: inline-block;
+      margin: 40px auto;
+      text-align: center;
+      padding: 12px 20px;
+      background: #e84d4d;
+      color: #f6dbdb;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #602b2b;
+      color: #e84d4d;
+      transform: scale(1.05);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      background: rgb(192, 66, 66);
+      color: #f6dbdb;
+      padding: 20px;
+      margin-top: 50px;
+      border-top: 5px solid #e84d4d;
+    }
+
+    @media (max-width: 850px) {
+      .project-section {
+        flex-direction: column;
+      }
+      .project-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sports Equipment Rental System</h1>
+    <p>C++ Interactive Rental Management</p>
+  </header>
+
+  <div class="intro">
+    <p>
+      A C++-based rental management system where customers can rent sports equipment, update their cart, search items, 
+      and generate receipts. The program applies <b>Stack, Queue, and Sorting algorithms</b> to simulate a complete rental process 
+      with efficient item tracking and cost calculation.
+    </p>
+  </div>
+
+  <!-- ===== Section 1 ===== -->
+  <div class="project-section">
+    <img src="files/R1.png">
+    <div class="project-text">
+      <h2>Equipment Menu & Options</h2>
+      <p>
+        Displays all available sports equipment across different categories, from badminton and baseball to hockey and football. 
+        Customers can choose their preferred items and select from multiple menu options for managing their cart.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 2 ===== -->
+  <div class="project-section">
+    <img src="files/R2.png">
+    <div class="project-text">
+      <h2>Add Item to Cart</h2>
+      <p>
+        Users enter the equipment ID, quantity, and number of rental days. 
+        Quantity helps organize multiple rentals, but the rental cost is calculated based solely on duration — 
+        at <b>RM50 per day</b>.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 3 ===== -->
+  <div class="project-section">
+    <img src="files/R3.png">
+    <div class="project-text">
+      <h2>Edit Item in Cart</h2>
+      <p>
+        Customers can update item details such as rental days or quantity. 
+        After editing, the system automatically recalculates the total rental cost using the updated values.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 4 ===== -->
+  <div class="project-section">
+    <img src="files/R4.png">
+    <div class="project-text">
+      <h2>Delete Item from Cart</h2>
+      <p>
+        Allows users to remove specific items from the cart instantly using their item ID, ensuring easy management of the rental list.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 5 ===== -->
+  <div class="project-section">
+    <img src="files/R5.png">
+    <div class="project-text">
+      <h2>Display Cart (Sorted)</h2>
+      <p>
+        Displays all equipment in the cart sorted by rental cost — from lowest to highest — using the <b>Bubble Sort algorithm</b>. 
+        Each item includes name, quantity, days, and total rental fee.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 6 ===== -->
+  <div class="project-section">
+    <img src="files/R6.png">
+    <div class="project-text">
+      <h2>Search Item in Cart</h2>
+      <p>
+        The <b>Linear Search algorithm</b> lets users find items by entering their equipment ID, making it fast to locate and check details.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 7 ===== -->
+  <div class="project-section">
+    <img src="files/R7.png">
+    <div class="project-text">
+      <h2>Display Latest Item (Stack)</h2>
+      <p>
+        Implements a <b>Stack structure</b> to show the most recently added item — following the “Last In, First Out” (LIFO) concept.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 8 ===== -->
+  <div class="project-section">
+    <img src="files/R8.png">
+    <div class="project-text">
+      <h2>Display First Item (Queue)</h2>
+      <p>
+        Uses a <b>Queue structure</b> to show the earliest added item in the cart, following the “First In, First Out” (FIFO) rule.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 9 ===== -->
+  <div class="project-section">
+    <img src="files/R9.png">
+    <div class="project-text">
+      <h2>Display Receipt</h2>
+      <p>
+        Generates a detailed receipt that includes all rented items, their rental duration, and total cost. 
+        A perfect summary of the entire rental transaction.
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ikmalia Shazlin</p>
+  </footer>
+
+</body>
+</html>
