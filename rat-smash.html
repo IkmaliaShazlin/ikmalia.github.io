@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <title>Movie Review Website | Ikmalia Portfolio</title>
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      padding: 0;
+      background: #f6c1c1;
+      color: #602b2b;
+      line-height: 1.6;
+    }
+
+    /* ===== Header ===== */
+    header {
+      color: rgb(192, 66, 66);
+      text-align: center;
+      padding: 50px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.1em;
+      color: white;
+      margin-top: 10px;
+    }
+
+    /* ===== Intro ===== */
+    .intro {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .intro p {
+      font-size: 1.1em;
+    }
+
+    /* ===== Project Sections ===== */
+    .project-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    }
+
+    .project-section img {
+    flex: 1.2;
+    width: 100%;
+    max-width: 280px; /* smaller width for mobile screenshots */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(230, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+    }
+
+
+    .project-section img:hover {
+    transform: scale(1.03);
+    }
+
+    .project-text {
+    flex: 1; /* less width for text */
+    color: #f6dbdb;
+    min-width: 260px;
+    background: rgb(192, 66, 66);
+    padding: 25px;
+    box-shadow: 0px 6px 15px rgba(230, 0, 0, 0.2);
+    border-radius: 6px;
+    }
+
+
+    .project-text h2 {
+      margin-top: 0;
+      color: #602b2b;
+    }
+
+    /* ===== Back Button ===== */
+    .back-btn {
+      display: inline-block;
+      margin: 40px auto;
+      text-align: center;
+      padding: 12px 20px;
+      background: #e84d4d;
+      color: #f6dbdb;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #602b2b;
+      color: #e84d4d;
+      transform: scale(1.05);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      background: rgb(192, 66, 66);
+      color: #f6dbdb;
+      padding: 20px;
+      margin-top: 50px;
+      border-top: 5px solid #e84d4d;
+    }
+
+    @media (max-width: 850px) {
+      .project-section {
+        flex-direction: column;
+      }
+      .project-text {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Movie Review Website</h1>
+    <p>HTML, CSS, PHP & Database Integration</p>
+  </header>
+
+  <div class="intro">
+    <p>
+      This project is a dynamic movie review platform where users can register, log in, add reviews, 
+      manage a personal wishlist, and watch trailers. Built with HTML, CSS, PHP, and MySQL — designed to 
+      create a simple yet interactive movie experience for users.
+    </p>
+  </div>
+
+  <!-- ===== Section 1 ===== -->
+  <div class="project-section">
+    <img src="files/Rat1.1.png">
+    <div class="project-text">
+      <h2>Home Screen</h2>
+      <p>
+        This is the first screen players will see before starting the game. Both players must enter their names in the provided fields and press the “Submit” button to continue. Once submitted, their names will be displayed throughout the game, creating a more personalized and competitive experience.
+    </div>
+  </div>
+
+   <!-- ===== Section 2 ===== -->
+  <div class="project-section">
+    <img src="files/Rat2.png">
+    <div class="project-text">
+      <h2>Main Menu</h2>
+      <p>
+        After submitting their names, players are directed to the Main Menu. Here, they can select the difficulty level of the game — Easy, Medium, or Hard. The harder the level, the faster the rat moves, making it more challenging to tap. The Main Menu also includes a “Leaderboard” button where players can view the highest scores achieved in previous rounds.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Section 3 ===== -->
+  <div class="project-section">
+    <img src="files/Rat3.png">
+    <div class="project-text">
+      <h2>Instructions</h2>
+      <p>
+        Once a difficulty level is chosen, Instructions will pop-up. It briefly explains how the game works and outlines the main rules. It ensures both players understand the gameplay mechanics, such as how to earn points and what happens when the timer runs out, before they begin.
+    </div>
+  </div>
+
+ <!-- ===== Section 4 ===== -->
+  <div class="project-section">
+    <img src="files/Rat4.png">
+    <div class="project-text">
+      <h2>Gameplay Page</h2>
+      <p>
+       This is the main gameplay screen where the real competition begins. The screen is split into two areas, one for Player One and one for Player Two. Each player must tap the rat as quickly as possible within their side of the screen to score points. A countdown timer is displayed at the top, gradually ticking down until it reaches zero, signaling the end of the match.
+      </p>
+    </div>
+  </div>
+
+ <!-- ===== Section 5 ===== -->
+  <div class="project-section">
+    <img src="files/Rat5.png">
+    <div class="project-text">
+      <h2>LeaderBoard Page</h2>
+      <p>
+        Once the timer reaches zero, players are automatically redirected to the Leaderboard page. This screen displays the final scores of both players and determines the winner of the round. The leaderboard also keeps track of previous game results, allowing players to compare scores and aim for new high records in future matches.
+      </p>
+    </div>
+  </div>
+
+
+  <div style="text-align: center;">
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Ikmalia Shazlin</p>
+  </footer>
