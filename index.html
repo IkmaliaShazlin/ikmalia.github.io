@@ -6,6 +6,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <title>Portfolio</title>
   <style>
+
+    /* ===== About Section Enhancement (Aligned Layout) ===== */
+    #about {
+      background: #fce2e2;
+      border-radius: 20px;
+      padding: 70px 10%;
+      box-shadow: 0 8px 25px rgba(96, 43, 43, 0.1);
+      transition: all 0.4s ease;
+      text-align: left;
+      max-width: 1000px;
+      margin: 60px auto;
+    }
+
+    #about:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(96, 43, 43, 0.2);
+    }
+
+    .intro-title {
+      font-size: 2.8em;
+      font-weight: bold;
+      margin: 15px 0 30px 0;
+      color: #602b2b;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    /* Gradient animation for Ikmalia */
+    .highlight-name {
+      background: #f15353;
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      animation: gradientFlow 3s infinite linear, fadeIn 1.5s ease-out;
+    }
+
+    /* Smooth fade-in */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Animated gradient shimmer */
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    #about p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #5b2a2a;
+      max-width: 750px;
+      margin-bottom: 25px;
+    }
+
+
     /* ===== Base Styling ===== */
     html {
       scroll-behavior: smooth;
@@ -199,7 +256,7 @@
 <body>
 
   <header>
-    <h1>My Portfolio</h1>
+    <h1>Ikmalia Shazlin</h1>
     <p>Showcasing my projects, skills, and documents</p>
   </header>
 
@@ -211,25 +268,30 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I'm Ikmalia!<br></p>
+
+    <h3 class="intro-title">
+      Hi, I'm <span class="highlight-name">Ikmalia!</span>
+    </h3>
+
     <p>
       A fresh IT grad with hands-on experience in software development, testing, automation, and programming. 
-      I love solving problems and making tech work smarter.. from debugging tricky issues to writing 
+      I love solving problems and making tech work smarter; from debugging tricky issues to writing 
       Selenium scripts that make testing effortless. I’m always curious, adaptable, and ready to take 
-      on challenges that help me grow.<br>
+      on challenges that help me grow.
     </p>
 
     <p>
-      This portfolio is a glimpse into what I’ve built and learned along the way.. a mix of my projects, 
-      skills, and the things I’m passionate about in tech.<br>
+      This portfolio is a glimpse into what I’ve built and learned along the way. It's a mix of my projects, 
+      skills, and the things I’m passionate about in tech..
     </p>
 
     <p>
       If you’d like to know more about my background and experience, feel free to check out my resume below!
     </p>
 
-    <a href="files/Resume_Latest.pdf" target="_blank" class="download-btn">Download Resume</a>
+    <a href="files/Resume_Latest.pdf" target="_blank" class="download-btn">⬇ Download Resume</a>
   </section>
+
 
   <section id="projects">
     <h2>Projects</h2>
