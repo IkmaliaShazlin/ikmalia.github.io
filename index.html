@@ -168,6 +168,33 @@
       transform: scale(1.05);
     }
 
+    .skills {
+      margin: 25px 0 35px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tag {
+      background: #602b2b;
+      color: #e84d4d;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(96, 43, 43, 0.2);
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+
+    .tag:hover {
+      background: #602b2b;
+      color: #f6dbdb;
+      transform: scale(1.1) rotate(-2deg);
+    }
+
+
     /* ===== Project Cards ===== */
     .projects {
       display: grid;
@@ -291,6 +318,21 @@
     </p>
 
     <a href="files/Resume_Latest.pdf" target="_blank" class="download-btn">Download Resume</a>
+    <p><br></p>
+
+      <!-- ===== Skill Tags Section ===== -->
+    <div class="skills">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">C</span>
+      <span class="tag">C++</span>
+      <span class="tag">Python</span>
+      <span class="tag">Selenium</span>
+      <span class="tag">MIT App Inventor</span>
+    </div>
+
   </section>
 
 
